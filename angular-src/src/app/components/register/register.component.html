@@ -1,0 +1,72 @@
+<br />
+<h2 class="page-header">사용자 등록 | Register</h2>
+<br />
+<!-- ngSubmit => 버튼을 누를 시 함수 실행 -->
+<form (ngSubmit)="onRegisterSubmit()">
+  <div class="form-group">
+    <label for="exampleInputEmail1"> 사용자 이름 | Name</label>
+    <input
+      type="text"
+      [(ngModel)]="name"
+      [ngModelOptions]="{ standalone: true }"
+      class="form-control"
+      id="exampleInputEmail1"
+    />
+  </div>
+
+  <br />
+
+  <div class="form-group">
+    <label for="exampleInputEmail2">이메일 | Email address</label>
+    <input
+      type="email"
+      [(ngModel)]="email"
+      [ngModelOptions]="{ standalone: true }"
+      class="form-control"
+      id="exampleInputEmail2"
+    />
+  </div>
+
+  <br />
+
+  <div class="form-group">
+    <label for="exampleInputEmail3"> 아이디 | Username</label>
+    <input
+      type="text"
+      [(ngModel)]="username"
+      [ngModelOptions]="{ standalone: true }"
+      class="form-control"
+      id="exampleInputEmail1"
+    />
+  </div>
+
+  <br />
+
+  <div class="form-group">
+    <label for="exampleInputEmail4"> 패스워드 | Password</label>
+    <input
+      type="password"
+      [(ngModel)]="password1"
+      [ngModelOptions]="{ standalone: true }"
+      class="form-control"
+      id="exampleInputEmail1"
+    />
+  </div>
+
+  <br />
+
+  <div class="form-group">
+    <label for="exampleInputEmail5"> 패스워드 확인 | Confirm Password</label>
+    <input
+      type="password"
+      [(ngModel)]="password2"
+      [ngModelOptions]="{ standalone: true }"
+      class="form-control"
+      id="exampleInputEmail1"
+    />
+  </div>
+
+  <br />
+
+  <input type="submit" class="btn btn-primary" value="Submit" />
+</form>

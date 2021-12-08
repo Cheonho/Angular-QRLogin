@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">MeanAuth</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">
+            <i class="bi bi-house-door-fill"></i>&nbsp;홈</a>
+        </li>
+        <li *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink="/profile">
+            <i class="bi bi-person-circle"></i>&nbsp;프로필</a>
+        </li>
+        <li *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink="/dashboard">
+            <i class="bi bi-speedometer"></i>&nbsp;대시보드</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li *ngIf="!checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink="/login">
+            <i class="bi bi-box-arrow-in-right"></i>&nbsp;로그인</a>
+        </li>
+        <li *ngIf="!checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink="/register">
+            <i class="bi bi-card-image"></i>&nbsp;사용자등록</a>
+        </li>
+        <li *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" (click)="onLogoutClick()">
+            <i class="bi bi-box-arrow-left"></i>&nbsp;로그아웃</a>
+        </li>
+        <li *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink="/list">
+            <i class="bi bi-person-lines-fill"></i>&nbsp;사용자리스트</a>
+        </li>
+        <li *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink="/cert">
+            <i class="bi bi-bank"></i>&nbsp;인증서발급</a>
+        </li>
+        <li *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink="/qrgen">
+            <i calss="bi bi-qr-code"></i>
+            <i class="bi bi-qr-code"></i>&nbsp;로그인용 QR생성</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

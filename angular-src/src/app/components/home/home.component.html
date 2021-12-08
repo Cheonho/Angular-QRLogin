@@ -1,0 +1,16 @@
+<!-- p-5는 크기, mb-4는 마진, bg는 백그라운드 색 -->
+<div class="p-5 mb-4 bg-light rounded-3 text-center">
+  <div class="container-fluid py-5 text-center">
+    <h1 class="display-5 fw-bold">91514983 천호범</h1>
+  </div>
+</div>
+<div>
+  <label> 팀프로젝트 소개</label> &nbsp; &nbsp;
+  <input [(ngModel)]="page" type="text" id="page" />
+  <br /><br />
+  <pdf-viewer
+    [src]="pdfSrc"
+    [page]="page"
+    style="display: block; position: relative; height: 700px"
+  ></pdf-viewer>
+</div>
