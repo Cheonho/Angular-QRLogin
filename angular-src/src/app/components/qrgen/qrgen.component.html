@@ -1,0 +1,16 @@
+<br />
+<h2 class="page-header">로그인용 전자서명 QR 생성 - {{ username }}</h2>
+<br />
+<div class="mb-3">
+  <label for="exampleFormControlInput2" class="form-label"
+    >로그인 요청 | Login Request
+  </label>
+  <textarea
+    class="form-control"
+    id="exampleFormControlInput2"
+    rows="4"
+    disabled
+    >{{ value }}</textarea
+  >
+</div>
+<ngx-qrcode [value]="value" [width]="500"> </ngx-qrcode>

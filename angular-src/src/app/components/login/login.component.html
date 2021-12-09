@@ -1,0 +1,70 @@
+<br />
+<h2 class="page -header">로그인 | Login</h2>
+<br />
+<div class="row">
+  <div class="col-md-6">
+    <div class="alert alert-success">
+      <form (ngSubmit)="onLoginSubmit()">
+        <div class="form-group">
+          <label for="exampleInputEmail3"> 아이디 | Username</label>
+          <input
+            type="text"
+            [(ngModel)]="username"
+            [ngModelOptions]="{ standalone: true }"
+            class="form-control"
+            id="exampleInputEmail1"
+          />
+        </div>
+
+        <br />
+
+        <div class="form-group">
+          <label for="exampleInputEmail4"> 패스워드 | Password</label>
+          <input
+            type="password"
+            [(ngModel)]="password"
+            [ngModelOptions]="{ standalone: true }"
+            class="form-control"
+            id="exampleInputEmail1"
+          />
+        </div>
+        <br />
+        <input type="submit" class="btn btn-primary" value="로그인" />
+      </form>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="alert alert-info">
+      <form (ngSubmit)="onLoginSigSubmit()">
+        <h3>
+          <input
+            type="submit"
+            class="btn btn-info"
+            value="원클릭 전자서명 로그인"
+          />
+        </h3>
+      </form>
+      <p>
+        브라우저가 인증서/개인키를 가지고 있는 경우 인증서를 이용한 원클릭
+        전자서명 로그인
+      </p>
+    </div>
+
+    <div class="alert alert-danger">
+      <form (ngSubmit)="onQRSigLoginSubmit()">
+        <h3>
+          <input
+            type="submit"
+            class="btn btn-danger"
+            value="QR 전자서명 로그인"
+          />
+        </h3>
+      </form>
+      <p>
+        인증서/개인키를 가지고 있는 마스터기기에서 생성한 로그인용 QR코드를
+        이용하여 인증수단을 가지지 않은 추가기기에서의 전자서명 로그인을 수행
+      </p>
+    </div>
+  </div>
+</div>
